@@ -1,0 +1,9 @@
+export {default as DiscoverIcon} from './discoverIcon/index.tsx';
+export {default as MedalIcon} from './medalIcon/index.tsx';
+export {default as ProfileIcon} from './profileIcon/index.tsx';
+export {default as SaveIcon} from './saveIcon/index.tsx';
+export {default as ArrowRight} from './arrowRight/index.tsx';
+export {default as SearchIcon} from './searchIcon/index.tsx';
+export {default as CloseIcon} from './closeIcon/index.tsx';
+export {default as SettingsIcon} from './settingsIcon/index.tsx';
+export {default as ListIcon} from './listIcon/index.tsx';

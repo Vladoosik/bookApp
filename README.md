@@ -1,79 +1,76 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Давайте начнем
 
-# Getting Started
+>**Заметка**: Убедитесь что вы завершили настройку [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup). Это главный шаг для начала работы с приложением 
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Шаг 1: Устновите необходимые пакеты
 
-## Step 1: Start the Metro Server
+Первое что вы должны сделать - это устновить пакеты (node-modules && pods). Сделать вы можете это использовав компанду 
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+```
+# Используя npm
+npm install
 
-To start Metro, run the following command from the _root_ of your React Native project:
+# Или используя Yarn
+yarn install
+```
+Если вы хотите запустить приложение на IOS вам так же необходимо устновить Pods, используя команду 
+
+```
+# Чтоб зайти в папку IOS 
+cd ios && pod install 
+# Или
+npx pod install
+```
+
+
+## Шаг 2: Запустите сервер Metro
+
+После того как установили все необходимые пакеты, необходимо запустить сервер **Metro**, JavaScript _bundler_ который соеденяется _с_ React Native.
+
+Для запуска сервера напишите в терминале одну из команд, нахоядсь в корневой папке проекта:
 
 ```bash
-# using npm
+# Используя npm
 npm start
 
-# OR using Yarn
+# Или Yarn
 yarn start
 ```
 
-## Step 2: Start your Application
+## Шаг 3: Запустите приложение
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+После успешного запуска сервера _"отдайте"_ терминал, и запустите новый так же находясь в корневой папке проекта. Напишите одну из предложенных ниже команд в зависимости от того на какой операционной системе вы хотите запустить _Android_ или _iOS_:
 
-### For Android
+### Для Android
 
 ```bash
-# using npm
+# Используя npm
 npm run android
 
-# OR using Yarn
+# Или используя Yarn
 yarn android
 ```
 
-### For iOS
+### Для iOS
 
 ```bash
-# using npm
+# Используя npm
 npm run ios
 
-# OR using Yarn
+# Или Используя Yarn
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+Если вы настроили все _корректно_, вы должны увидеть что приложение начало запускаться на _Android Emulator_ или _iOS Simulator_.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+Это как один из вариантов, есть также возможность запустить проект с помощью Android Studio и XCode (Я предпочитаю второй вариант).
 
-## Step 3: Modifying your App
 
-Now that you have successfully run the app, let's modify it.
+## У вас получилось! :tada:
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+## Технологии
+В данном прложении используется **React native 0.74**, **Typescript 5.04**, для навигации **React navigation native**, основной state manager **Mobx** (хотя можно было обойтись и без него), **react-native-reanimated-carousel** Для списков, и все прилагащие этой библиотеки (reanimated, gesture-handler)
 
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+# P.S.
+Единственное что я хочу добавить, так это то что в некоторых случаях я использовал **any** в качестве типов для typescript (изначально хотел использовать обычный js, но как получлось), так делать нельзя, и лучше использовать полный функционал языка программирования. Причина довольно простая, у меня не так много было времени на реализацию данного проекта 
