@@ -12,8 +12,8 @@ const RenderBooksColumn: FC<RenderBooksProps<TopChartsType>> = props => {
   return (
     <View style={styles.renderContainer}>
       {books.map((book: TopChartsType) => (
-        <Pressable onPress={() => onBookPress(book)}>
-          <View style={styles.bookItem} key={book.trends}>
+        <Pressable onPress={() => onBookPress(book)} key={book.trends}>
+          <View style={styles.bookItem}>
             <Image source={{uri: book.image}} style={styles.bookImage} />
             <Text style={styles.chart}>{book.trends}</Text>
             <View>
